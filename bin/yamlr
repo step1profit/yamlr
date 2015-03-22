@@ -1,0 +1,68 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'optparse'
+require 'pp'
+
+$:.unshift File.join(File.dirname(__FILE__), '..', 'lib')
+require 'yamlr'
+
+module YamlrOpt
+  DESC = Yamlr::Defaults.descriptions
+  def self.command
+    hsh = {}
+    hsh[:opt] = {}
+    ops = nil
+    OptionParser.new do |opts|
+      opts.banner = "Yamlr #{Yamlr::VERSION}"
+      opts.on("-r", "--read FILENAME", String, String, ".yml file to Ruby Hash or Array") do |x|
+        hsh[:cmd] = 1
+        hsh[:arg] = [x]
+      end
+
+      opts.on("-w", "--write FILENAME,FILENAME", Array, "Hash or Array => .yml file") do |x|
+        hsh[:cmd] = 2
+        hsh[:arg] = x
+      end
+
+      opts.on("-d", "--dotfile [HOME]", String, "Create .yamlrc dotfile") do |x|
+        x.nil? ? (y = Yamlr.dotfile) : (y = Yamlr.dotfile(x))
+        z = "#{File.dirname(y).chomp("/")}/.yamlrc"
+        puts "existed: #{z}, moved to: #{y}" if File.basename(y) != ".yamlrc"
+        puts "created: #{z}"
+        return
+      end
+
+      opts.on("-v", "--version", "Display verison number") do
+        STDOUT.write("Yamlr #{Yamlr::VERSION}\n\r")
+        return
+      end
+
+      opts.on("-h", "--help", "Show this message") do
+        puts opts
+        return
+      end
+
+      Yamlr::Defaults.constants.sort.each do |x|
+        next if x == "DOTFILE"
+        opts.on("--[no-]#{x.downcase}", DESC[x.downcase]) do |y|
+          hsh[:opt]["#{x.downcase}".to_sym] = y
+          puts "use options with --read or --write" && return if hsh[:cmd].nil?
+        end
+      end
+      ops = opts
+    end.parse!
+    puts ops unless hsh.has_key?(:cmd)
+    return unless hsh.has_key?(:cmd)
+    self.run(hsh[:cmd], hsh[:arg], hsh[:opt])
+  end
+
+  def self.run(cmd, arg, opt)
+    x = Yamlr.read(arg[0], opt)
+    case cmd
+    when 1 then pp x
+    when 2 then Yamlr.write(arg[0], arg[1], opt)
+    end
+  end
+end
+
+YamlrOpt.command

@@ -1,0 +1,10 @@
+=== 1.0.0 / 2009-04-20
+
+* 1 major enhancement
+
+  * Birthday!
+
+=== 2.0.0 / 2015-03-22
+
+* Changed gem name to Yamlr
+* Works on Ruby 1.9.3 or higher
