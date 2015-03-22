@@ -22,8 +22,71 @@ gem install yamlr
 
 == SYNOPSIS:
 
-* FIX (code sample of usage)
+=== Comand Line Usage
 
+$ yamlr
+Yamlr 2.0.0
+    -r, --read FILENAME              .yml file to Ruby Hash or Array
+    -w, --write FILENAME,FILENAME    Hash or Array => .yml file
+    -d, --dotfile [HOME]             Create .yamlrc dotfile
+    -v, --version                    Display verison number
+    -h, --help                       Show this message
+        --[no-]auto_sym
+        --[no-]auto_sym_keys
+        --[no-]auto_sym_vals
+        --[no-]auto_true
+        --[no-]auto_true_keys
+        --[no-]auto_true_vals
+        --[no-]docs
+        --[no-]dot
+        --[no-]dotfile
+        --[no-]int
+        --[no-]int_keys
+        --[no-]int_vals
+        --[no-]list
+        --[no-]strip
+        --[no-]strip_keys
+        --[no-]strip_vals
+        --[no-]symbolize
+        --[no-]symbolize_keys
+        --[no-]symbolize_vals
+        --[no-]sym_str
+        --[no-]sym_str_keys
+        --[no-]sym_str_vals
+        --[no-]yaml
+
+$ yamlr -r your_app/config/database.yml
+{"development"=>
+  {"adapter"=>"sqlite3",
+   "database"=>"db/development.sqlite3",
+   "pool"=>5,
+   "timeout"=>5000},
+[...]
+
+=== Ruby Env Usage
+
+File to Hash or Array
+'''
+Yamlr.read("your_app/config/database.yml")
+# {"development"=>
+#  {"adapter"=>"sqlite3",
+#   "database"=>"db/development.sqlite3",
+#   "pool"=>5,
+#   "timeout"=>5000},
+# [...]
+'''
+
+Hash or Array to .yml Array
+'''
+object = {1=>2,3=>4}
+Yamlr.parse(object)
+'''
+
+Hash or Array to .yml file
+'''
+object = {1=>2,3=>4}
+Yamlr.write(object, filename)
+'''
 == REQUIREMENTS:
 
 * ruby 1.9.3 or higher
