@@ -1,13 +1,13 @@
-= Yamlr
+# Yamlr
 
 * http://github.com/step1profit/yamlr
 * http://seattlerb.org
 
-== DESCRIPTION:
+## DESCRIPTION:
 
 Yamlr is a minimal YAML parser written in Ruby.
 
-== FEATURES:
+## FEATURES:
 
 * Parse Array/Hash/String
 * Read/write .yml files
@@ -16,14 +16,16 @@ Yamlr is a minimal YAML parser written in Ruby.
 * Robust command line support
 * No variables or fancy YAML features
 
-== INSTALLATION:
-
+## INSTALLATION:
+```
 gem install yamlr
+```
 
-== SYNOPSIS:
+## SYNOPSIS:
 
-=== Comand Line Usage
+### Comand Line Usage
 
+```
 $ yamlr
 Yamlr 2.0.0
     -r, --read FILENAME              .yml file to Ruby Hash or Array
@@ -62,11 +64,12 @@ $ yamlr -r your_app/config/database.yml
    "pool"=>5,
    "timeout"=>5000},
 [...]
+```
 
-=== Ruby Env Usage
+### Ruby Env Usage
 
 File to Hash or Array
-'''
+```ruby
 Yamlr.read("your_app/config/database.yml")
 # {"development"=>
 #  {"adapter"=>"sqlite3",
@@ -74,24 +77,24 @@ Yamlr.read("your_app/config/database.yml")
 #   "pool"=>5,
 #   "timeout"=>5000},
 # [...]
-'''
+```
 
 Hash or Array to .yml Array
-'''
+```ruby
 object = {1=>2,3=>4}
 Yamlr.parse(object)
-'''
+```
 
 Hash or Array to .yml file
-'''
+```ruby
 object = {1=>2,3=>4}
 Yamlr.write(object, filename)
-'''
-== REQUIREMENTS:
+```
+## REQUIREMENTS:
 
 * ruby 1.9.3 or higher
 
-== LICENSE:
+## LICENSE:
 
 The MIT License (MIT)
 
