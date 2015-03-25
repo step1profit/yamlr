@@ -1,11 +1,11 @@
 #!/usr/bin/env ruby -w
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
 
 require 'rubygems'
 require 'minitest/unit'
 $: << 'lib' << 'test'
 require 'yamlr'
-require "codeclimate-test-reporter"
-CodeClimate::TestReporter.start
 MiniTest::Unit.autorun
 
 class TestYamlr < MiniTest::Unit::TestCase

@@ -13,4 +13,4 @@ notifications:
     secure: nM0G9P6jxhacZ3ZtQwn5FiR0CHxnLwx6N4xRp9SFjbQm3S0dF9pBP+HzC3zvr66iOa8weocqPt54eZOCBdunqSaiMYHq4pUFZUHXQKn+st6YyrNemY/7jr4kIYTVJnQZ5pxO7UX8vu8nH0B4dh4uLT4shCLoLVey0kwbL6FDr98=
 addons:
   code_climate:
-    repo_token: 55125ed6e30ba02ab5001584
+    repo_token: 114630be62cb1598f526de59ad8bad860d71197d492fa0af17dddae2ea0e5861
