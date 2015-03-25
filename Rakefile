@@ -1,19 +1,27 @@
 # -*- ruby -*-
 
 require "rubygems"
+
 gem 'hoe'
 require "hoe"
-
-# https://github.com/jbarnette/hoe-git
 Hoe.plugin :git
-Hoe.plugin :yard
-# https://github.com/flavorjones/hoe-gemspec
 Hoe.plugin :gemspec
+Hoe.plugin :bundler
+Hoe.plugin :yard
 
 Hoe.spec "yamlr" do
   developer('Step1Profit', 'sales@step1profit.com')
 
   license "MIT"
+
+  self.extra_dev_deps += [
+    ["hoe-bundler",     ">= 1.1"],
+    ["hoe-gemspec",     ">= 1.0"],
+    ["hoe-git",         ">= 1.4"],
+    ["minitest",        "~> 2.2.2"],
+  ]
+
+  self.testlib = :minitest
 end
 
 # vim: syntax=ruby

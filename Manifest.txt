@@ -1,7 +1,9 @@
 .autotest
+.travis.yml
+Gemfile
 History.txt
 Manifest.txt
-README.txt
+README.md
 Rakefile
 bin/yamlr
 lib/yamlr.rb
