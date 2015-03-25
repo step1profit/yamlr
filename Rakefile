@@ -1,13 +1,8 @@
 # -*- ruby -*-
 
 require "rubygems"
+gem 'hoe'
 require "hoe"
-
-# Hoe.plugin :compiler
-# Hoe.plugin :gem_prelude_sucks
-# Hoe.plugin :inline
-# Hoe.plugin :racc
-# Hoe.plugin :rcov
 
 # https://github.com/jbarnette/hoe-git
 Hoe.plugin :git
