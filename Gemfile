@@ -10,6 +10,7 @@ gem "hoe-bundler", ">=1.1", :group => [:development, :test]
 gem "hoe-gemspec", ">=1.0", :group => [:development, :test]
 gem "hoe-git", ">=1.4", :group => [:development, :test]
 gem "minitest", "~>2.2.2", :group => [:development, :test]
+gem "codeclimate-test-reporter", ">=0.4", :group => [:development, :test]
 gem "hoe", "~>3.13", :group => [:development, :test]
 
 # vim: syntax=ruby
