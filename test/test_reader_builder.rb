@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby -w
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
 
 $: << 'lib' << 'test'
 require "minitest/autorun"

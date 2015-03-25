@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby -w
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
 
 require 'rubygems'
 require 'minitest/unit'
