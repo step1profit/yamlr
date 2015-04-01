@@ -6,7 +6,7 @@
 [![Test Coverage](https://codeclimate.com/github/step1profit/yamlr/badges/coverage.svg)](https://codeclimate.com/github/step1profit/yamlr)
 [![Dependency Status](https://gemnasium.com/step1profit/yamlr.svg)](https://gemnasium.com/step1profit/yamlr)
 [![Inline docs](http://inch-ci.org/github/step1profit/yamlr.svg?branch=master)](http://inch-ci.org/github/step1profit/yamlr)
-[![Yard Docs](http://img.shields.io/badge/yard-docs-blue.svg)](http://www.rubydoc.info/gems/inde_struct)
+[![Yard Docs](http://img.shields.io/badge/yard-docs-blue.svg)](http://www.rubydoc.info/gems/yamlr)
 
 * http://github.com/step1profit/yamlr
 * http://seattlerb.org
