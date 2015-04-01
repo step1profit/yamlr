@@ -1,10 +1,11 @@
 # Yamlr
 
-[![Gem Version](https://badge.fury.io/rb/yamlr.svg)](http://badge.fury.io/rb/yamlr)
+[![Gem Version](https://badge.fury.io/rb/yamlr.svg)](https://rubygems.org/gems/yamlr)
 [![Build Status](https://travis-ci.org/step1profit/yamlr.svg?branch=master)](https://travis-ci.org/step1profit/yamlr)
 [![Code Climate](https://codeclimate.com/github/step1profit/yamlr/badges/gpa.svg)](https://codeclimate.com/github/step1profit/yamlr)
 [![Test Coverage](https://codeclimate.com/github/step1profit/yamlr/badges/coverage.svg)](https://codeclimate.com/github/step1profit/yamlr)
 [![Dependency Status](https://gemnasium.com/step1profit/yamlr.svg)](https://gemnasium.com/step1profit/yamlr)
+[![Inline docs](http://inch-ci.org/github/step1profit/yamlr.svg?branch=master)](http://inch-ci.org/github/step1profit/yamlr)
 
 * http://github.com/step1profit/yamlr
 * http://seattlerb.org
